@@ -6,10 +6,13 @@ Circle::Circle(double r)
     : r_(r)
 {}
 
-Circle::Circle(const Circle & other)
-{
-    r_ = other.getRadius();
-}
+// use 'default'
+// Circle::Circle(const Circle & other)
+// {
+//     r_ = other.getRadius();
+// }
+
+static_assert(M_PI != 3.14, "M_PI is rounded!");
 
 double Circle::getArea() const
 {
